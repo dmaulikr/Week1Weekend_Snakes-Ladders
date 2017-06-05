@@ -10,6 +10,7 @@
 		4AE0F3261EE4AB6300425C18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0F3251EE4AB6300425C18 /* main.m */; };
 		4AE0F32F1EE4AC9D00425C18 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0F32E1EE4AC9D00425C18 /* InputHandler.m */; };
 		4AE0F3321EE4ADA400425C18 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0F3311EE4ADA400425C18 /* Player.m */; };
+		4AE0F3351EE4D91A00425C18 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0F3341EE4D91A00425C18 /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		4AE0F32E1EE4AC9D00425C18 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		4AE0F3301EE4ADA400425C18 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		4AE0F3311EE4ADA400425C18 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		4AE0F3331EE4D91A00425C18 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		4AE0F3341EE4D91A00425C18 /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				4AE0F3251EE4AB6300425C18 /* main.m */,
+				4AE0F3331EE4D91A00425C18 /* PlayerManager.h */,
+				4AE0F3341EE4D91A00425C18 /* PlayerManager.m */,
 				4AE0F3301EE4ADA400425C18 /* Player.h */,
 				4AE0F3311EE4ADA400425C18 /* Player.m */,
 				4AE0F32D1EE4AC9D00425C18 /* InputHandler.h */,
@@ -132,6 +137,7 @@
 			files = (
 				4AE0F3261EE4AB6300425C18 /* main.m in Sources */,
 				4AE0F3321EE4ADA400425C18 /* Player.m in Sources */,
+				4AE0F3351EE4D91A00425C18 /* PlayerManager.m in Sources */,
 				4AE0F32F1EE4AC9D00425C18 /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

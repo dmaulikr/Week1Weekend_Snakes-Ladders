@@ -20,7 +20,9 @@
     
     NSString *trimmedString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    return trimmedString;
+    NSString *trimmedLowercasedString = [trimmedString lowercaseString];
+    
+    return trimmedLowercasedString;
 }
 
 @end

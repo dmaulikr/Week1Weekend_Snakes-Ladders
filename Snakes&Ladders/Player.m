@@ -40,19 +40,20 @@
 
     self.currentSquare += randValue;
     
-    NSLog(@"You rolled: %ld.", randValue);
+    self.outputRolledString = [NSString stringWithFormat:@"rolled: %ld.", randValue];
     
     if (self.currentSquare >= 100) {
         self.gameOver = YES;
     }else{
+        self.outputString = [NSString stringWithFormat:@"landed on: %ld", self.currentSquare];
         for (NSNumber *key in self.gameLogic) {
             if (key.integerValue == self.currentSquare) {
                 self.currentSquare = [self.gameLogic[key] integerValue];
-                NSLog(@"You jumped from %ld to %ld", key.integerValue,[self.gameLogic[key] integerValue]);
+                self.outputString = [NSString stringWithFormat:@"jumped from %ld to %ld", key.integerValue,[self.gameLogic[key] integerValue] ];
             }
         }
-        NSLog(@"You landed on: %ld", self.currentSquare);
     }
 }
+
 
 @end

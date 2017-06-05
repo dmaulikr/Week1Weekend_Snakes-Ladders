@@ -8,22 +8,37 @@
 
 #import <Foundation/Foundation.h>
 #import "InputHandler.h"
-#import "Player.h"
+#import "PlayerManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         InputHandler *input = [InputHandler new];
-        Player *player1 = [Player new];
+        PlayerManager *playerManager = [PlayerManager new];
+        
+        NSString *userInput = [NSString string];
         
         while(true){
-            if(player1.gameOver == YES){
-                NSLog(@"You win. Game Over!");
+            if([playerManager.players count] > 0){
                 break;
             }else{
-                NSString *userInput = [input inputForPrompt:@"\nr - Roll\n>"];
+                userInput = [input inputForPrompt:@"How many players? \n>"];
+                if([userInput integerValue]){
+                    [playerManager createPlayers:userInput.integerValue];
+                }else{
+                    continue;
+                }
+            }
+        }
+        
+        while(true){
+            if(playerManager.gameOver == YES){
+                NSLog(@"Game Over!");
+                break;
+            }else{
+                userInput = [input inputForPrompt:@"\nr - Roll\n>"];
                 
                 if([userInput isEqualToString:@"r"]){
-                    [player1 roll];
+                    [playerManager roll];
                 }
             }
         }
